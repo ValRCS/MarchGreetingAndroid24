@@ -3,6 +3,8 @@ package com.example.marchgreeting
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -28,8 +30,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    BirthdayGreetings("Valdis", 28.sp)
-                    Greeting("RTU Students")
+                    Column {
+                        BirthdayGreetings("Valdis", 28.sp)
+                        Greeting("RTU Students")
+                    }
 
                 }
             }
